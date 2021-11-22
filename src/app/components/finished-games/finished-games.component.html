@@ -1,0 +1,9 @@
+<div>
+    <p>Ganaste!</p>
+    <p>Esta es la lista de todos los juegos terminados</p>
+    <div style="width: 200px; padding: 10px; border: 2px solid black; margin: 5px" *ngFor="let juego of juegosTerminados">
+        <p>Turnos que duró el juego: {{juego.turnosIniciales - juego.turnosTomados}}</p>
+        <p>Turnos iniciales: {{juego.turnosIniciales}}</p>
+    </div>
+    <button (click)="regresarInicio()">Volver</button>
+</div>

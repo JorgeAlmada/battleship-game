@@ -1,0 +1,10 @@
+<div class="game-container">
+    <p class="header">BATTLESHIP!</p>
+    <p>Seleccione su número de turnos</p>
+    <input class="start-input" type="number" value="" placeholder="Numero de turnos" [(ngModel)]="numTurnos" /><br/>
+    <button class="game-button" (click)="setNumTurnos()">Seleccionar</button>
+    <p>O seleccione una dificultad</p>
+    <button class="game-button" style="background-color: green;" (click)="setDificultad(200)">Facil</button>
+    <button class="game-button" style="background-color: yellow;" (click)="setDificultad(100)">Mediano</button>
+    <button class="game-button" style="background-color: red;" (click)="setDificultad(50)">Dificil</button>
+</div>

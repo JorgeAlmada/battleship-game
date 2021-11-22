@@ -1,0 +1,25 @@
+<div style="display: flex; flex-wrap: wrap;">
+    <p class="header" style="flex: 0 0 100%">Sus turnos restantes: {{this.turnos}}</p>
+    <ng-container *ngIf="mapDone">
+        <div style="display: flex; flex: 0 0 70%" *ngFor="let fila of gameMap; let indice = index">
+            <ng-container *ngFor="let elemento of fila; let indice2 = index">
+                <div class="game-block" (click)="makeTrue(indice, indice2)">
+                    <img [ngStyle]="{'display': this.clickMap[indice][indice2] ? 'block' : 'none'}" class="waterimg" src="../../../assets/images/miss.png" />
+                    <img [ngStyle]="{'display': this.clickMap[indice][indice2] && fila[indice2] != '' && !everyoneHit(fila[indice2]) ? 'block' : 'none'}" class="hitimg" src="../../../assets/images/boom.png" />
+                    <img [ngStyle]="{'display': everyoneHit(fila[indice2]) ? 'block' : 'none'}" class="hitimg" src="../../../assets/images/whiteflag.png" />
+                </div>
+            </ng-container>
+        </div>
+        <div style="display: flex; flex: 0 0 30%; flex-wrap: wrap;">
+            <p style="flex: 0 0 100%">Indicadores</p>
+            <div style="display: flex; flex: 0 0 100%; flex-wrap: wrap;">
+                <p>Le pegaste a un barco!</p>
+                <img style="height: 50px; width: 50px;" src="../../../assets/images/boom.png"/>
+            </div>
+            <div style="display: flex; flex: 0 0 100%; flex-wrap: wrap;">
+                <p>Hundiste el barco!</p>
+                <img style="height: 50px; width: 50px;" src="../../../assets/images/whiteflag.png"/>
+            </div>
+        </div>
+    </ng-container>
+</div>

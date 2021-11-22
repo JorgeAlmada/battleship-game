@@ -1,0 +1,28 @@
+.game-container{
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 20% 0px;
+}
+
+.start-input{
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.game-button{
+    width: 200px;
+    height: 75px;
+    font-size: 24px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+.header{
+    font-size: 32px;
+}
